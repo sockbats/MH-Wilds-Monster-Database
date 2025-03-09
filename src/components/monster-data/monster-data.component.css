@@ -1,0 +1,14 @@
+main {
+    background-image: url("/Background.jpg");
+    background-size: cover;
+    height: 100vh;
+}
+
+#monster_select {
+    color: white;
+    background: none;
+}
+
+#monster_select * {
+    color: antiquewhite;
+}
