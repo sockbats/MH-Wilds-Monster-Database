@@ -1,7 +1,14 @@
 main {
-    background-image: url("/Background.jpg");
+    background: saddlebrown url("/Background.jpg") fixed;
     background-size: cover;
     height: 100vh;
+}
+
+#main_content {
+    width: 80vw;
+    margin: 0 auto;
+    padding-top: 20px;
+    overflow: auto;
 }
 
 #monster_select {
@@ -11,4 +18,13 @@ main {
 
 #monster_select * {
     color: antiquewhite;
+}
+
+#monster_data {
+    width: fit-content;
+}
+
+#hitzone_values {
+    background: #c3ac79;
+    color: #000;
 }

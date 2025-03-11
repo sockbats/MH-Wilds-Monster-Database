@@ -13,6 +13,7 @@ import {
 import {FormControl, ReactiveFormsModule} from "@angular/forms";
 import {map, Observable, startWith} from "rxjs";
 import {AsyncPipe} from "@angular/common";
+import {Hitzone} from "../../interfaces/Hitzone"
 import monster_data from '../../../web-scraper/monster_data.json'
 
 @Component({
@@ -50,10 +51,9 @@ export class MonsterDataComponent implements OnInit {
   monster_names = Array.from(this.monsters.keys());
   filtered_monsters: Observable<string[]> = new Observable();
 
-  selected_monster: {name: string, hitzones: {}[]} = {"name":  "", "hitzones": []};
+  selected_monster: {name: string, hitzones: Hitzone[], wounded_hitzones: Map<string, Hitzone>} = {"name":  "", "hitzones": [], "wounded_hitzones": new Map};
 
   ngOnInit() {
-    console.log(this.monsters)
     this.filtered_monsters = this.monster_select.valueChanges.pipe(
         startWith(''),
         map(value => this.filter_monsters(value || ''))
@@ -72,5 +72,16 @@ export class MonsterDataComponent implements OnInit {
       return
     }
     this.selected_monster = selected_monster
+    this.selected_monster.wounded_hitzones = new Map<string, Hitzone>(Object.entries(selected_monster.wounded_hitzones))
+    console.log(this.selected_monster)
+    setTimeout(() => document.getElementById("monster_select_input")!.blur(), 50)
+  }
+
+  clear_input() {
+    this.monster_select.setValue("");
+  }
+
+  restore_input() {
+    setTimeout(() => this.monster_select.setValue(this.selected_monster.name), 100)
   }
 }
