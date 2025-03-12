@@ -1336,7 +1336,7 @@
             },
             {
                 "part_name": "Left Foreleg",
-                "state": "Breakable",
+                "state": "Broken",
                 "sever": 75,
                 "blunt": 75,
                 "ammo": 75,
@@ -1406,7 +1406,7 @@
             },
             {
                 "part_name": "Right Foreleg",
-                "state": "Breakable",
+                "state": "Broken",
                 "sever": 75,
                 "blunt": 75,
                 "ammo": 75,
@@ -2688,7 +2688,7 @@
             },
             {
                 "part_name": "Head",
-                "state": "Breakable",
+                "state": "Broken",
                 "sever": 25,
                 "blunt": 35,
                 "ammo": 25,
@@ -2730,7 +2730,7 @@
             },
             {
                 "part_name": "Belly",
-                "state": "Breakable",
+                "state": "Broken",
                 "sever": 70,
                 "blunt": 70,
                 "ammo": 60,
@@ -2758,7 +2758,7 @@
             },
             {
                 "part_name": "Back",
-                "state": "Breakable",
+                "state": "Broken",
                 "sever": 45,
                 "blunt": 45,
                 "ammo": 40,
@@ -2800,7 +2800,7 @@
             },
             {
                 "part_name": "Left Leg",
-                "state": "Breakable",
+                "state": "Broken",
                 "sever": 30,
                 "blunt": 30,
                 "ammo": 25,
@@ -2828,7 +2828,7 @@
             },
             {
                 "part_name": "Right Leg",
-                "state": "Breakable",
+                "state": "Broken",
                 "sever": 30,
                 "blunt": 30,
                 "ammo": 25,
@@ -2856,7 +2856,7 @@
             },
             {
                 "part_name": "Left Wing",
-                "state": "Breakable",
+                "state": "Broken",
                 "sever": 35,
                 "blunt": 35,
                 "ammo": 26,
@@ -2884,7 +2884,7 @@
             },
             {
                 "part_name": "Right Wing",
-                "state": "Breakable",
+                "state": "Broken",
                 "sever": 35,
                 "blunt": 35,
                 "ammo": 26,
@@ -3591,7 +3591,7 @@
             },
             {
                 "part_name": "Head",
-                "state": "Breakable",
+                "state": "Broken",
                 "sever": 60,
                 "blunt": 65,
                 "ammo": 55,
@@ -3661,7 +3661,7 @@
             },
             {
                 "part_name": "Left Foreleg",
-                "state": "Breakable",
+                "state": "Broken",
                 "sever": 45,
                 "blunt": 45,
                 "ammo": 40,
@@ -3703,7 +3703,7 @@
             },
             {
                 "part_name": "Right Foreleg",
-                "state": "Breakable",
+                "state": "Broken",
                 "sever": 45,
                 "blunt": 45,
                 "ammo": 40,
@@ -3731,7 +3731,7 @@
             },
             {
                 "part_name": "Left Hind Leg",
-                "state": "Breakable",
+                "state": "Broken",
                 "sever": 50,
                 "blunt": 50,
                 "ammo": 40,
@@ -3759,7 +3759,7 @@
             },
             {
                 "part_name": "Right Hind Leg",
-                "state": "Breakable",
+                "state": "Broken",
                 "sever": 50,
                 "blunt": 50,
                 "ammo": 40,
@@ -3787,7 +3787,7 @@
             },
             {
                 "part_name": "Tail",
-                "state": "Breakable",
+                "state": "Broken",
                 "sever": 50,
                 "blunt": 45,
                 "ammo": 45,
@@ -3829,7 +3829,7 @@
             },
             {
                 "part_name": "Tail Tip",
-                "state": "Breakable",
+                "state": "Broken",
                 "sever": 50,
                 "blunt": 45,
                 "ammo": 45,
@@ -4186,7 +4186,7 @@
             },
             {
                 "part_name": "Left Leg",
-                "state": "Breakable",
+                "state": "Broken",
                 "sever": 45,
                 "blunt": 45,
                 "ammo": 50,
@@ -4242,7 +4242,7 @@
             },
             {
                 "part_name": "Right Leg",
-                "state": "Breakable",
+                "state": "Broken",
                 "sever": 45,
                 "blunt": 45,
                 "ammo": 50,
@@ -4298,7 +4298,7 @@
             },
             {
                 "part_name": "Tail",
-                "state": "Breakable",
+                "state": "Broken",
                 "sever": 60,
                 "blunt": 60,
                 "ammo": 75,
@@ -5940,7 +5940,7 @@
             },
             {
                 "part_name": "Head",
-                "state": "Breakable",
+                "state": "Broken",
                 "sever": 50,
                 "blunt": 65,
                 "ammo": 50,
@@ -5968,7 +5968,7 @@
             },
             {
                 "part_name": "Torso",
-                "state": "Breakable",
+                "state": "Broken",
                 "sever": 36,
                 "blunt": 36,
                 "ammo": 40,
@@ -5996,7 +5996,7 @@
             },
             {
                 "part_name": "Belly",
-                "state": "Breakable",
+                "state": "Broken",
                 "sever": 65,
                 "blunt": 50,
                 "ammo": 45,
@@ -6024,7 +6024,7 @@
             },
             {
                 "part_name": "Left Claw",
-                "state": "Breakable",
+                "state": "Broken",
                 "sever": 20,
                 "blunt": 30,
                 "ammo": 20,
@@ -6052,7 +6052,7 @@
             },
             {
                 "part_name": "Right Claw",
-                "state": "Breakable",
+                "state": "Broken",
                 "sever": 20,
                 "blunt": 30,
                 "ammo": 20,
@@ -6080,7 +6080,7 @@
             },
             {
                 "part_name": "Left Foreleg",
-                "state": "Breakable",
+                "state": "Broken",
                 "sever": 35,
                 "blunt": 35,
                 "ammo": 25,
@@ -6108,7 +6108,7 @@
             },
             {
                 "part_name": "Right Foreleg",
-                "state": "Breakable",
+                "state": "Broken",
                 "sever": 35,
                 "blunt": 35,
                 "ammo": 25,
@@ -6136,7 +6136,7 @@
             },
             {
                 "part_name": "Mantle",
-                "state": "Breakable",
+                "state": "Broken",
                 "sever": 45,
                 "blunt": 45,
                 "ammo": 25,
@@ -6164,7 +6164,7 @@
             },
             {
                 "part_name": "Left Hind Leg",
-                "state": "Breakable",
+                "state": "Broken",
                 "sever": 45,
                 "blunt": 45,
                 "ammo": 35,
@@ -6192,7 +6192,7 @@
             },
             {
                 "part_name": "Right Hind Leg",
-                "state": "Breakable",
+                "state": "Broken",
                 "sever": 45,
                 "blunt": 45,
                 "ammo": 35,
@@ -6220,7 +6220,7 @@
             },
             {
                 "part_name": "Stinger",
-                "state": "Breakable",
+                "state": "Broken",
                 "sever": 28,
                 "blunt": 35,
                 "ammo": 65,

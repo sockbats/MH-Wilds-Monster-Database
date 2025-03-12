@@ -23,6 +23,9 @@ class Monster:
         self.wounded_hitzones = {part_name: hitzone for part_name, hitzone in self.wounded_hitzones.items() if part_name != ""}
 
     def rename_states(self):
+        for hitzone in self.hitzones:
+            if hitzone.state == "Breakable":
+                hitzone.state = "Broken"
         match self.name:
             case "Gore Magala":
                 for hitzone in self.hitzones:
