@@ -77,4 +77,17 @@ main {
   font-weight: bold;
 }
 
+@media (max-width: 1050px) {
+  #main_content {
+    width: min(550px, 100vw);
+  }
+  #hitzone_values .mat-column-part_name, #hitzone_values .mat-column-state {
+    min-width: 80px;
+    font-size: 8pt;
+  }
+  #hitzone_values th, #hitzone_values td {
+    min-width: 32px;
+  }
+}
+
 /*# sourceMappingURL=monster-data.component.css.map */
