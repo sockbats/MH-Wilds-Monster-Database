@@ -24,6 +24,14 @@ main {
   color: white;
 }
 
+#monster_name {
+  display: inline-flex;
+  align-items: center;
+}
+#monster_name img {
+  margin: 0 5px;
+}
+
 #monster_data {
   margin: auto;
   width: fit-content;
@@ -31,13 +39,6 @@ main {
   display: block;
   max-width: 100%;
   max-height: 80vh;
-}
-#monster_data #monster_name {
-  display: inline-flex;
-  align-items: center;
-}
-#monster_data #monster_name img {
-  margin: 0 5px;
 }
 
 #hitzone_values {

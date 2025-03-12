@@ -14,14 +14,13 @@
             </mat-form-field>
             <mat-checkbox (change)="toggle_wounded_parts($event.checked)">Wounded Parts</mat-checkbox>
         </div>
-
+        <span id="monster_name">
+            <img ngSrc="{{'monster-images/' + selected_monster.name + '.png'}}"
+                 onerror="this.src='monster-images/Question Mark.png'"
+                 height="64" width="64" alt="Monster Image" priority>
+            <h3 [innerText]="selected_monster.name"></h3>
+        </span>
         <div id="monster_data">
-            <span id="monster_name">
-                <img ngSrc="{{'monster-images/' + selected_monster.name + '.png'}}"
-                     onerror="this.src='monster-images/Question Mark.png'"
-                     height="64" width="64" alt="Monster Image" priority>
-                <h3 [innerText]="selected_monster.name"></h3>
-            </span>
             <mat-table id="hitzone_values" [dataSource]="selected_monster.hitzones">
                 <ng-container matColumnDef="part_name" sticky>
                     <th mat-header-cell *matHeaderCellDef>Part</th>
