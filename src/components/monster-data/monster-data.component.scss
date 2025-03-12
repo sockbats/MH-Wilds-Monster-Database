@@ -1,0 +1,87 @@
+main {
+    background: saddlebrown url("/Background.jpg") fixed;
+    background-size: cover;
+    height: 100vh;
+}
+
+#main_content {
+    width: min(80vw, 900px);
+    margin: 0 auto;
+    padding-top: 20px;
+    background: rgba(195, 172, 121, .8);
+    min-height: 90vh;
+}
+
+#monster_selector {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    * {
+        color: antiquewhite;
+    }
+}
+
+
+#monster_select {
+    color: white;
+}
+
+#monster_data {
+    margin: auto;
+    width: fit-content;
+    overflow: auto;
+    display: block;
+    max-width: 100%;
+    max-height: 80vh;
+}
+
+#hitzone_values {
+    background: #c3ac79;
+    color: #000;
+    width: 100%;
+
+    th, td {
+        padding: 0;
+        min-width: 55px;
+        height: 55px;
+        text-align: center;
+    }
+
+    td {
+        vertical-align: bottom;
+        font-size: 16px;
+    }
+
+    .centered-span {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+
+    .mat-column-part_name, .mat-column-state{
+        min-width: 150px;
+        text-align: left;
+        vertical-align: bottom;
+        padding-left: 10px;
+    }
+
+    .mat-column-kinsect_extract {
+        padding-right: 10px;
+        width: 75px;
+    }
+
+    .wounded_hitzone_value {
+        font-size: 12px;
+        position: absolute;
+        top: 0;
+        right: 2px;
+    }
+}
+
+.bold {
+    font-weight: bold;
+}
+

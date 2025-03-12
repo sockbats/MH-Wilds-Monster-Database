@@ -1,5 +1,123 @@
 [
     {
+        "name": "Element Man",
+        "hitzones": [
+            {
+                "part_name": "5",
+                "state": "",
+                "sever": 5,
+                "blunt": 5,
+                "ammo": 5,
+                "fire": 5,
+                "water": 5,
+                "thunder": 5,
+                "ice": 5,
+                "dragon": 5,
+                "stun": 100,
+                "kinsect_extract": "RED"
+            },
+            {
+                "part_name": "10",
+                "state": "",
+                "sever": 10,
+                "blunt": 10,
+                "ammo": 10,
+                "fire": 10,
+                "water": 10,
+                "thunder": 10,
+                "ice": 10,
+                "dragon": 10,
+                "stun": 100,
+                "kinsect_extract": "RED"
+            },
+            {
+                "part_name": "15",
+                "state": "",
+                "sever": 15,
+                "blunt": 15,
+                "ammo": 15,
+                "fire": 15,
+                "water": 15,
+                "thunder": 15,
+                "ice": 15,
+                "dragon": 15,
+                "stun": 100,
+                "kinsect_extract": "RED"
+            },
+            {
+                "part_name": "20",
+                "state": "",
+                "sever": 20,
+                "blunt": 20,
+                "ammo": 20,
+                "fire": 20,
+                "water": 20,
+                "thunder": 20,
+                "ice": 20,
+                "dragon": 20,
+                "stun": 100,
+                "kinsect_extract": "RED"
+            },
+            {
+                "part_name": "25",
+                "state": "",
+                "sever": 25,
+                "blunt": 25,
+                "ammo": 25,
+                "fire": 25,
+                "water": 25,
+                "thunder": 25,
+                "ice": 25,
+                "dragon": 25,
+                "stun": 100,
+                "kinsect_extract": "RED"
+            },
+            {
+                "part_name": "30",
+                "state": "",
+                "sever": 30,
+                "blunt": 30,
+                "ammo": 30,
+                "fire": 30,
+                "water": 30,
+                "thunder": 30,
+                "ice": 30,
+                "dragon": 30,
+                "stun": 100,
+                "kinsect_extract": "RED"
+            },
+            {
+                "part_name": "35",
+                "state": "",
+                "sever": 35,
+                "blunt": 35,
+                "ammo": 35,
+                "fire": 35,
+                "water": 35,
+                "thunder": 35,
+                "ice": 35,
+                "dragon": 35,
+                "stun": 100,
+                "kinsect_extract": "RED"
+            },
+            {
+                "part_name": "40",
+                "state": "",
+                "sever": 40,
+                "blunt": 40,
+                "ammo": 40,
+                "fire": 40,
+                "water": 40,
+                "thunder": 40,
+                "ice": 40,
+                "dragon": 40,
+                "stun": 100,
+                "kinsect_extract": "RED"
+            }
+        ],
+        "wounded_hitzones": {}
+    },
+    {
         "name": "Rathian",
         "hitzones": [
             {
