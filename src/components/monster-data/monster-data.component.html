@@ -1,4 +1,4 @@
-<main>
+<main style="background: saddlebrown url('Background.jpg') fixed">
     <section id="main_content">
         <div id="monster_selector">
             <mat-form-field id="monster_select" appearance="outline">
@@ -36,7 +36,7 @@
                 <ng-container matColumnDef="sever">
                     <th mat-header-cell *matHeaderCellDef>
                         <span class="centered-span">
-                            <img ngSrc="/damage-types/sever.png" height="32" width="32" alt="Sever Hitzone">
+                            <img ngSrc="damage-types/sever.png" height="32" width="32" alt="Sever Hitzone">
                         </span>
                     </th>
                     <td mat-cell *matCellDef="let hitzone">
@@ -51,7 +51,7 @@
                 <ng-container matColumnDef="blunt">
                     <th mat-header-cell *matHeaderCellDef>
                         <span class="centered-span">
-                            <img ngSrc="/damage-types/blunt.png" height="32" width="32" alt="Blunt Hitzone">
+                            <img ngSrc="damage-types/blunt.png" height="32" width="32" alt="Blunt Hitzone">
                         </span>
                     </th>
                     <td mat-cell *matCellDef="let hitzone">
@@ -66,7 +66,7 @@
                 <ng-container matColumnDef="ammo">
                     <th mat-header-cell *matHeaderCellDef>
                         <span class="centered-span">
-                            <img ngSrc="/damage-types/ammo.png" height="32" width="32" alt="Ammo Hitzone">
+                            <img ngSrc="damage-types/ammo.png" height="32" width="32" alt="Ammo Hitzone">
                         </span>
                     </th>
                     <td mat-cell *matCellDef="let hitzone">
@@ -81,7 +81,7 @@
                 <ng-container matColumnDef="fire">
                     <th mat-header-cell *matHeaderCellDef>
                         <span class="centered-span">
-                            <img ngSrc="/damage-types/fire.png" height="32" width="32" alt="Fire Hitzone">
+                            <img ngSrc="damage-types/fire.png" height="32" width="32" alt="Fire Hitzone">
                         </span>
                     </th>
                     <td mat-cell *matCellDef="let hitzone" [ngStyle]="{'background': get_element_color('fire', hitzone.fire), 'color': hitzone.fire >= 25 ? 'white' : 'black'}">
@@ -96,7 +96,7 @@
                 <ng-container matColumnDef="water">
                     <th mat-header-cell *matHeaderCellDef>
                         <span class="centered-span">
-                            <img ngSrc="/damage-types/water.png" height="32" width="32" alt="Water Hitzone">
+                            <img ngSrc="damage-types/water.png" height="32" width="32" alt="Water Hitzone">
                         </span>
                     </th>
                     <td mat-cell *matCellDef="let hitzone" [ngStyle]="{'background': get_element_color('water', hitzone.water), 'color': hitzone.water >= 25 ? 'white' : 'black'}">
@@ -111,7 +111,7 @@
                 <ng-container matColumnDef="thunder">
                     <th mat-header-cell *matHeaderCellDef>
                         <span class="centered-span">
-                            <img ngSrc="/damage-types/thunder.png" height="32" width="32" alt="Thunder Hitzone">
+                            <img ngSrc="damage-types/thunder.png" height="32" width="32" alt="Thunder Hitzone">
                         </span>
                     </th>
                     <td mat-cell *matCellDef="let hitzone" [ngStyle]="{'background': get_element_color('thunder', hitzone.thunder), 'color': hitzone.thunder >= 25 ? 'white' : 'black'}">
@@ -126,7 +126,7 @@
                 <ng-container matColumnDef="ice">
                     <th mat-header-cell *matHeaderCellDef>
                         <span class="centered-span">
-                            <img ngSrc="/damage-types/ice.png" height="32" width="32" alt="Ice Hitzone">
+                            <img ngSrc="damage-types/ice.png" height="32" width="32" alt="Ice Hitzone">
                         </span>
                     </th>
                     <td mat-cell *matCellDef="let hitzone" [ngStyle]="{'background': get_element_color('ice', hitzone.ice), 'color': hitzone.ice >= 25 ? 'white' : 'black'}">
@@ -141,7 +141,7 @@
                 <ng-container matColumnDef="dragon">
                     <th mat-header-cell *matHeaderCellDef>
                         <span class="centered-span">
-                            <img ngSrc="/damage-types/dragon.png" height="32" width="32" alt="Dragon Hitzone">
+                            <img ngSrc="damage-types/dragon.png" height="32" width="32" alt="Dragon Hitzone">
                         </span>
                     </th>
                     <td mat-cell *matCellDef="let hitzone" [ngStyle]="{'background': get_element_color('dragon', hitzone.dragon), 'color': hitzone.dragon >= 25 ? 'white' : 'black'}">
@@ -156,7 +156,7 @@
                 <ng-container matColumnDef="stun">
                     <th mat-header-cell *matHeaderCellDef>
                         <span class="centered-span">
-                            <img ngSrc="/damage-types/stun.png" height="32" width="32" alt="Stun">
+                            <img ngSrc="damage-types/stun.png" height="32" width="32" alt="Stun">
                         </span>
                     </th>
                     <td mat-cell *matCellDef="let hitzone">
@@ -168,7 +168,7 @@
                 <ng-container matColumnDef="kinsect_extract">
                     <th mat-header-cell *matHeaderCellDef>
                         <span class="centered-span">
-                            <img ngSrc="/kinsect_extracts/kinsect_extract.png" height="32" width="32" alt="Kinsect Extract">
+                            <img ngSrc="kinsect_extracts/kinsect_extract.png" height="32" width="32" alt="Kinsect Extract">
                         </span>
                     </th>
                     <td mat-cell *matCellDef="let hitzone">

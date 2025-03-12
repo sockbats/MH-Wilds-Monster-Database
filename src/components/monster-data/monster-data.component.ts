@@ -118,15 +118,15 @@ export class MonsterDataComponent implements OnInit {
   get_kinsect_extract(extract_color: string) {
     switch (extract_color) {
       case "GREEN":
-        return "/kinsect_extracts/kinsect_extract_green.png"
+        return "kinsect_extracts/kinsect_extract_green.png"
       case "RED":
-        return "/kinsect_extracts/kinsect_extract_red.png"
+        return "kinsect_extracts/kinsect_extract_red.png"
       case "WHITE":
-        return "/kinsect_extracts/kinsect_extract_white.png"
+        return "kinsect_extracts/kinsect_extract_white.png"
       case "ORANGE":
-        return "/kinsect_extracts/kinsect_extract_orange.png"
+        return "kinsect_extracts/kinsect_extract_orange.png"
       default:
-        return "/kinsect_extracts/kinsect_extract.png"
+        return "kinsect_extracts/kinsect_extract.png"
     }
   }
 }

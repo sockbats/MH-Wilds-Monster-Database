@@ -36,13 +36,16 @@ def get_monster_data(site_path: str) -> Monster:
         monster.hitzones.append(Hitzone(*list(map(lambda x: x.text, hitzone)), extracts_map.get(hitzone[0].text)))
 
     monster.split_wounded_hitzones()
+    monster.remove_nameless_hitzones()
+    monster.rename_states()
     return monster
 
 
 def main():
     monster_links = get_monster_links()
     # monster_data = [get_monster_data("/data/monsters/rathalos")]
-    monster_data = [get_monster_data(monster) for monster in monster_links]
+    monster_data = [get_monster_data(monster) for monster in monster_links if monster != "/data/monsters/high-purrformance-barrel-puncher"]
+    monster_data.sort(key=lambda monster: monster.name)
     with open("monster_data.json", "w") as f:
         f.write(json.dumps([monster.to_dict() for monster in monster_data], indent=4))
 
