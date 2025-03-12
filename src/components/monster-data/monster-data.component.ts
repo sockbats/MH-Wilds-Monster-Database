@@ -52,6 +52,7 @@ export class MonsterDataComponent implements OnInit {
   displayedColumns = ["part_name", "state", "sever", "blunt", "ammo",
     "fire", "water", "thunder", "ice", "dragon", "stun", "kinsect_extract"];
   show_wounded_parts = false;
+  monster_select_cleared = false;
 
   monsters = new Map(monster_data.map((monster: any) => [monster.name, monster]));
 
@@ -84,14 +85,12 @@ export class MonsterDataComponent implements OnInit {
     }
     console.log(this.selected_monster)
     setTimeout(() => document.getElementById("monster_select_input")!.blur(), 50)
+    document.getElementById("monster_image")
+    document.getElementById("monster_name")
   }
 
   clear_input() {
     this.monster_select.setValue("");
-  }
-
-  restore_input() {
-    setTimeout(() => this.monster_select.setValue(this.selected_monster.name), 100)
   }
 
   toggle_wounded_parts(is_checked: boolean) {

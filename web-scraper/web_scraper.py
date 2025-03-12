@@ -6,6 +6,7 @@ from Hitzone import Hitzone
 
 
 KIRANICO_URL = r"https://mhwilds.kiranico.com"
+MH_WIKI_URL = r"https://monsterhunterwiki.org"
 
 
 def get_monster_links() -> list[str]:
@@ -16,6 +17,25 @@ def get_monster_links() -> list[str]:
     monster_table = soup.find("table").find_all("tr")
     monster_links = [row.find("a")["href"] for row in monster_table]
     return monster_links
+
+def get_monster_images():
+    url = MH_WIKI_URL + "/wiki/Category:MHWilds_Monster_Icons"
+    site_data = get(url).content
+    soup = BeautifulSoup(site_data, "html.parser")
+
+    image_table = soup.find("div", {"id": "mw-category-media"}).find_all("div", {"class": "thumb"})
+    monster_images = [(item.find("a")["href"].replace("/wiki/File:MHWilds-", "").split("_Icon")[0].replace("_", " "),
+                       item.find("img")["src"]) for item in image_table]
+    for image in monster_images:
+        image_file = get(image[1]).content
+        file_path = f"../public/monster-images/{image[0]}.{image[1].split(".")[-1]}"
+        if "Ceratonoth Female" in file_path:
+            file_path = f"../public/monster-images/Ceratonoth (Female).png"
+        elif "Ceratonoth" in file_path:
+            file_path = f"../public/monster-images/Ceratonoth (Male).png"
+
+        with open(file_path, "wb") as f:
+            f.write(image_file)
 
 
 def get_monster_data(site_path: str) -> Monster:
@@ -42,9 +62,11 @@ def get_monster_data(site_path: str) -> Monster:
 
 
 def main():
+    get_monster_images()
     monster_links = get_monster_links()
     # monster_data = [get_monster_data("/data/monsters/rathalos")]
-    monster_data = [get_monster_data(monster) for monster in monster_links if monster != "/data/monsters/high-purrformance-barrel-puncher"]
+    ignored_monsters = ["/data/monsters/high-purrformance-barrel-puncher", "/data/monsters/dalthydon-livestock"]
+    monster_data = [get_monster_data(monster) for monster in monster_links if monster not in ignored_monsters]
     monster_data.sort(key=lambda monster: monster.name)
     with open("monster_data.json", "w") as f:
         f.write(json.dumps([monster.to_dict() for monster in monster_data], indent=4))

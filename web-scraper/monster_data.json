@@ -1938,40 +1938,6 @@
         "wounded_hitzones": {}
     },
     {
-        "name": "Dalthydon (Livestock)",
-        "hitzones": [
-            {
-                "part_name": "Head",
-                "state": "",
-                "sever": 50,
-                "blunt": 50,
-                "ammo": 50,
-                "fire": 50,
-                "water": 50,
-                "thunder": 50,
-                "ice": 50,
-                "dragon": 50,
-                "stun": 100,
-                "kinsect_extract": "RED"
-            },
-            {
-                "part_name": "Body",
-                "state": "",
-                "sever": 80,
-                "blunt": 80,
-                "ammo": 80,
-                "fire": 70,
-                "water": 70,
-                "thunder": 70,
-                "ice": 70,
-                "dragon": 70,
-                "stun": 0,
-                "kinsect_extract": "GREEN"
-            }
-        ],
-        "wounded_hitzones": {}
-    },
-    {
         "name": "Doshaguma",
         "hitzones": [
             {
