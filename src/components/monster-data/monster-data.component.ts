@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
 import {MatFormField, MatLabel} from "@angular/material/form-field";
 import {MatOption} from "@angular/material/select";
 import {MatInput} from "@angular/material/input";
@@ -8,7 +8,7 @@ import {
   MatColumnDef,
   MatHeaderCell, MatHeaderCellDef,
   MatHeaderRow, MatHeaderRowDef, MatRow, MatRowDef,
-  MatTable,
+  MatTable, MatTableDataSource,
 } from "@angular/material/table";
 import {FormControl, ReactiveFormsModule} from "@angular/forms";
 import {map, Observable, startWith} from "rxjs";
@@ -16,6 +16,7 @@ import {AsyncPipe, NgClass, NgIf, NgOptimizedImage, NgStyle} from "@angular/comm
 import {Hitzone} from "../../interfaces/Hitzone"
 import monster_data from '../../../web-scraper/monster_data.json'
 import {MatCheckbox} from "@angular/material/checkbox";
+import {MatSort, MatSortHeader} from "@angular/material/sort";
 
 @Component({
   selector: 'app-monster-data',
@@ -42,7 +43,9 @@ import {MatCheckbox} from "@angular/material/checkbox";
     NgIf,
     NgClass,
     NgStyle,
-    NgOptimizedImage
+    NgOptimizedImage,
+    MatSort,
+    MatSortHeader
   ],
   templateUrl: './monster-data.component.html',
   styleUrl: './monster-data.component.scss'
@@ -52,7 +55,6 @@ export class MonsterDataComponent implements OnInit {
   displayedColumns = ["part_name", "state", "sever", "blunt", "ammo",
     "fire", "water", "thunder", "ice", "dragon", "stun", "kinsect_extract"];
   show_wounded_parts = false;
-  monster_select_cleared = false;
 
   monsters = new Map(monster_data.map((monster: any) => [monster.name, monster]));
 
@@ -60,6 +62,8 @@ export class MonsterDataComponent implements OnInit {
   filtered_monsters: Observable<string[]> = new Observable();
 
   selected_monster: {name: string, hitzones: Hitzone[], wounded_hitzones: Map<string, Hitzone>} = {"name":  "", "hitzones": [], "wounded_hitzones": new Map};
+  data_source = new MatTableDataSource(this.selected_monster.hitzones)
+  @ViewChild(MatSort) sort!: MatSort;
 
   ngOnInit() {
     this.filtered_monsters = this.monster_select.valueChanges.pipe(
@@ -85,8 +89,8 @@ export class MonsterDataComponent implements OnInit {
     }
     console.log(this.selected_monster)
     setTimeout(() => document.getElementById("monster_select_input")!.blur(), 50)
-    document.getElementById("monster_image")
-    document.getElementById("monster_name")
+    this.data_source.data = this.selected_monster.hitzones
+    this.data_source.sort = this.sort
   }
 
   clear_input() {

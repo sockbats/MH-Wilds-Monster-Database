@@ -17,13 +17,13 @@
         <span id="monster_name">
             <img ngSrc="{{'monster-images/' + selected_monster.name + '.png'}}"
                  onerror="this.src='monster-images/Question Mark.png'"
-                 height="64" width="64" alt="Monster Image" priority>
+                 height="48" width="48" alt="Monster Image" priority>
             <h3 [innerText]="selected_monster.name"></h3>
         </span>
         <div id="monster_data">
-            <mat-table id="hitzone_values" [dataSource]="selected_monster.hitzones">
+            <mat-table id="hitzone_values" matSort [dataSource]="data_source">
                 <ng-container matColumnDef="part_name" sticky>
-                    <th mat-header-cell *matHeaderCellDef>Part</th>
+                    <th id="part_name_header" mat-header-cell mat-sort-header *matHeaderCellDef>Part</th>
                     <td mat-cell *matCellDef="let hitzone">
                         <span class="centered-span" style="justify-content: left">
                             {{hitzone.part_name}}
@@ -31,7 +31,7 @@
                     </td>
                 </ng-container>
                 <ng-container matColumnDef="state">
-                    <th mat-header-cell *matHeaderCellDef>State</th>
+                    <th id="state_header" mat-header-cell mat-sort-header *matHeaderCellDef>State</th>
                     <td mat-cell *matCellDef="let hitzone">
                         <span class="centered-span" style="justify-content: left">
                             {{hitzone.state}}
@@ -39,7 +39,7 @@
                     </td>
                 </ng-container>
                 <ng-container matColumnDef="sever">
-                    <th mat-header-cell *matHeaderCellDef>
+                    <th mat-header-cell mat-sort-header *matHeaderCellDef>
                         <span class="centered-span">
                             <img ngSrc="damage-types/sever.png" height="32" width="32" alt="Sever Hitzone">
                         </span>
@@ -54,7 +54,7 @@
                     </td>
                 </ng-container>
                 <ng-container matColumnDef="blunt">
-                    <th mat-header-cell *matHeaderCellDef>
+                    <th mat-header-cell mat-sort-header *matHeaderCellDef>
                         <span class="centered-span">
                             <img ngSrc="damage-types/blunt.png" height="32" width="32" alt="Blunt Hitzone">
                         </span>
@@ -69,7 +69,7 @@
                     </td>
                 </ng-container>
                 <ng-container matColumnDef="ammo">
-                    <th mat-header-cell *matHeaderCellDef>
+                    <th mat-header-cell mat-sort-header *matHeaderCellDef>
                         <span class="centered-span">
                             <img ngSrc="damage-types/ammo.png" height="32" width="32" alt="Ammo Hitzone">
                         </span>
@@ -84,7 +84,7 @@
                     </td>
                 </ng-container>
                 <ng-container matColumnDef="fire">
-                    <th mat-header-cell *matHeaderCellDef>
+                    <th mat-header-cell mat-sort-header *matHeaderCellDef>
                         <span class="centered-span">
                             <img ngSrc="damage-types/fire.png" height="32" width="32" alt="Fire Hitzone">
                         </span>
@@ -99,7 +99,7 @@
                     </td>
                 </ng-container>
                 <ng-container matColumnDef="water">
-                    <th mat-header-cell *matHeaderCellDef>
+                    <th mat-header-cell mat-sort-header *matHeaderCellDef>
                         <span class="centered-span">
                             <img ngSrc="damage-types/water.png" height="32" width="32" alt="Water Hitzone">
                         </span>
@@ -114,7 +114,7 @@
                     </td>
                 </ng-container>
                 <ng-container matColumnDef="thunder">
-                    <th mat-header-cell *matHeaderCellDef>
+                    <th mat-header-cell mat-sort-header *matHeaderCellDef>
                         <span class="centered-span">
                             <img ngSrc="damage-types/thunder.png" height="32" width="32" alt="Thunder Hitzone">
                         </span>
@@ -129,7 +129,7 @@
                     </td>
                 </ng-container>
                 <ng-container matColumnDef="ice">
-                    <th mat-header-cell *matHeaderCellDef>
+                    <th mat-header-cell mat-sort-header *matHeaderCellDef>
                         <span class="centered-span">
                             <img ngSrc="damage-types/ice.png" height="32" width="32" alt="Ice Hitzone">
                         </span>
@@ -144,7 +144,7 @@
                     </td>
                 </ng-container>
                 <ng-container matColumnDef="dragon">
-                    <th mat-header-cell *matHeaderCellDef>
+                    <th mat-header-cell mat-sort-header *matHeaderCellDef>
                         <span class="centered-span">
                             <img ngSrc="damage-types/dragon.png" height="32" width="32" alt="Dragon Hitzone">
                         </span>
@@ -159,7 +159,7 @@
                     </td>
                 </ng-container>
                 <ng-container matColumnDef="stun">
-                    <th mat-header-cell *matHeaderCellDef>
+                    <th mat-header-cell mat-sort-header *matHeaderCellDef>
                         <span class="centered-span">
                             <img ngSrc="damage-types/stun.png" height="32" width="32" alt="Stun">
                         </span>
@@ -171,7 +171,7 @@
                     </td>
                 </ng-container>
                 <ng-container matColumnDef="kinsect_extract">
-                    <th mat-header-cell *matHeaderCellDef>
+                    <th mat-header-cell mat-sort-header *matHeaderCellDef>
                         <span class="centered-span">
                             <img ngSrc="kinsect_extracts/kinsect_extract.png" height="32" width="32" alt="Kinsect Extract">
                         </span>

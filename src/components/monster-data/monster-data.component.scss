@@ -8,7 +8,8 @@ main {
     margin: 0 auto;
     padding-top: 20px;
     background: rgba(195, 172, 121, .8);
-    min-height: 90vh;
+    min-height: 89vh;
+    max-height: 89vh;
 }
 
 #monster_selector {
@@ -36,10 +37,10 @@ main {
 #monster_data {
     margin: auto;
     width: fit-content;
-    overflow: auto;
     display: block;
+    overflow: auto;
     max-width: 100%;
-    max-height: 80vh;
+    max-height: 72vh;
 }
 
 #hitzone_values {
@@ -68,7 +69,7 @@ main {
         height: 100%;
     }
 
-    .mat-column-part_name, .mat-column-state{
+    .mat-column-part_name, .mat-column-state, #part_name_header, #state_header {
         min-width: 150px;
         text-align: left;
         vertical-align: bottom;
@@ -95,7 +96,7 @@ main {
 @media (max-width: 1050px) {
     #main_content {
        width: min(550px, 100vw);
-}
+    }
 
     #hitzone_values {
         .mat-column-part_name, .mat-column-state {
