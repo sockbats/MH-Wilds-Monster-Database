@@ -59,6 +59,10 @@ export class MonsterDataComponent implements OnInit {
   monsters = new Map(monster_data.map((monster: any) => [monster.name, monster]));
 
   monster_names = Array.from(this.monsters.keys());
+  small_monster_names: any[] = [
+      "Vespoid", "Conga", "Blango", "Ceratonoth (Male)", "Ceratonoth (Female)", "Dalthydon", "Bulaqchi", "Talioth",
+    "Baunos", "Gajios", "Piragill", "Harpios", "Kranodath", "Comaqchi", "Gelidron", "Rafma", "Porkeplume",
+    "Nerscylla Hatchling", "Guardian Seikret"];
   filtered_monsters: Observable<string[]> = new Observable();
 
   selected_monster: {name: string, hitzones: Hitzone[], wounded_hitzones: Map<string, Hitzone>} = {"name":  "", "hitzones": [], "wounded_hitzones": new Map};
@@ -70,6 +74,8 @@ export class MonsterDataComponent implements OnInit {
         startWith(''),
         map(value => this.filter_monsters(value || ''))
     )
+    // Remove small_monsters unless checked
+    this.monster_names = this.monster_names.filter(name => !this.small_monster_names.includes(name))
   }
 
   filter_monsters(value: string) {
@@ -130,6 +136,15 @@ export class MonsterDataComponent implements OnInit {
         return "kinsect_extracts/kinsect_extract_orange.png"
       default:
         return "kinsect_extracts/kinsect_extract.png"
+    }
+  }
+
+  toggle_small_monsters(checked: boolean) {
+    if (!checked) {
+      this.monster_names = this.monster_names.filter(name => !this.small_monster_names.includes(name))
+    }
+    else {
+      this.monster_names = this.monster_names.concat(this.small_monster_names)
     }
   }
 }

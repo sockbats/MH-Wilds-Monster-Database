@@ -12,6 +12,7 @@
                        [formControl]="monster_select"
                        (focusin)="clear_input()">
             </mat-form-field>
+            <mat-checkbox (change)="toggle_small_monsters($event.checked)">Small monsters</mat-checkbox>
             <mat-checkbox (change)="toggle_wounded_parts($event.checked)">Wounded Parts</mat-checkbox>
         </div>
         <span id="monster_name">
