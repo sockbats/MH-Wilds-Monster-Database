@@ -33,6 +33,8 @@ def get_monster_images():
             file_path = f"../public/monster-images/Ceratonoth (Female).png"
         elif "Ceratonoth" in file_path:
             file_path = f"../public/monster-images/Ceratonoth (Male).png"
+        elif "Alpha " in file_path or "Frenzied " in file_path or "Tempered " in file_path:
+            continue
 
         with open(file_path, "wb") as f:
             f.write(image_file)
