@@ -27,6 +27,22 @@ class Monster:
             if hitzone.state == "Breakable":
                 hitzone.state = "Broken"
         match self.name:
+            case "Ajarakan":
+                for hitzone in self.hitzones:
+                    if hitzone.state == "State_1":
+                        hitzone.state = "Flaming"
+            case "Arkveld" | "Guardian Arkveld":
+                for hitzone in self.hitzones:
+                    if hitzone.state == "State_1":
+                        hitzone.state = "Powered"
+            case "Chatacabra":
+                for hitzone in self.hitzones:
+                    if hitzone.state == "State_1":
+                        hitzone.state = "Ore Covered 1"
+                    elif hitzone.state == "State_2":
+                        hitzone.state = "Ore Covered 2"
+                    elif hitzone.state == "State_3":
+                        hitzone.state = "Ore Covered 3"
             case "Gore Magala":
                 for hitzone in self.hitzones:
                     if hitzone.state == "State_1":
@@ -37,15 +53,7 @@ class Monster:
                         hitzone.state = "State_1"
                     elif hitzone.state == "State_2":
                         hitzone.state = "State_2"
-            case "Chatacabra":
-                for hitzone in self.hitzones:
-                    if hitzone.state == "State_1":
-                        hitzone.state = "State_1"
-                    elif hitzone.state == "State_2":
-                        hitzone.state = "State_2"
-                    elif hitzone.state == "State_3":
-                        hitzone.state = "State_3"
-            case "Rompopolo":
+            case "Mizutsune":
                 for hitzone in self.hitzones:
                     if hitzone.state == "State_1":
                         hitzone.state = "State_1"
@@ -55,14 +63,10 @@ class Monster:
                         hitzone.state = "State_1"
                     elif hitzone.state == "State_2":
                         hitzone.state = "State_2"
-            case "Ajarakan":
+            case "Rompopolo":
                 for hitzone in self.hitzones:
                     if hitzone.state == "State_1":
-                        hitzone.state = "Enraged"
-            case "Guardian Arkveld" | "Arkveld":
-                for hitzone in self.hitzones:
-                    if hitzone.state == "State_1":
-                        hitzone.state = "Powered"
+                        hitzone.state = "State_1"
             case "Zoh Shia":
                 for hitzone in self.hitzones:
                     if hitzone.state == "State_1":

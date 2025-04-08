@@ -18,7 +18,7 @@
             },
             {
                 "part_name": "Head",
-                "state": "Enraged",
+                "state": "Flaming",
                 "sever": 50,
                 "blunt": 50,
                 "ammo": 45,
@@ -46,7 +46,7 @@
             },
             {
                 "part_name": "Right Foreleg",
-                "state": "Enraged",
+                "state": "Flaming",
                 "sever": 65,
                 "blunt": 65,
                 "ammo": 60,
@@ -88,7 +88,7 @@
             },
             {
                 "part_name": "Left Foreleg",
-                "state": "Enraged",
+                "state": "Flaming",
                 "sever": 65,
                 "blunt": 65,
                 "ammo": 60,
@@ -200,7 +200,7 @@
             },
             {
                 "part_name": "Belly",
-                "state": "Enraged",
+                "state": "Flaming",
                 "sever": 45,
                 "blunt": 45,
                 "ammo": 45,
@@ -1350,7 +1350,7 @@
             },
             {
                 "part_name": "Left Foreleg",
-                "state": "State_1",
+                "state": "Ore Covered 1",
                 "sever": 50,
                 "blunt": 65,
                 "ammo": 50,
@@ -1364,7 +1364,7 @@
             },
             {
                 "part_name": "Left Foreleg",
-                "state": "State_2",
+                "state": "Ore Covered 2",
                 "sever": 50,
                 "blunt": 65,
                 "ammo": 50,
@@ -1378,7 +1378,7 @@
             },
             {
                 "part_name": "Left Foreleg",
-                "state": "State_3",
+                "state": "Ore Covered 3",
                 "sever": 55,
                 "blunt": 70,
                 "ammo": 55,
@@ -1420,7 +1420,7 @@
             },
             {
                 "part_name": "Right Foreleg",
-                "state": "State_1",
+                "state": "Ore Covered 1",
                 "sever": 50,
                 "blunt": 65,
                 "ammo": 50,
@@ -1434,7 +1434,7 @@
             },
             {
                 "part_name": "Right Foreleg",
-                "state": "State_2",
+                "state": "Ore Covered 2",
                 "sever": 50,
                 "blunt": 65,
                 "ammo": 50,
@@ -1448,7 +1448,7 @@
             },
             {
                 "part_name": "Right Foreleg",
-                "state": "State_3",
+                "state": "Ore Covered 3",
                 "sever": 55,
                 "blunt": 70,
                 "ammo": 55,
