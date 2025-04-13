@@ -70,4 +70,4 @@ class Monster:
             case "Zoh Shia":
                 for hitzone in self.hitzones:
                     if hitzone.state == "State_1":
-                        hitzone.state = "State_1"
+                        hitzone.state = "Fallen"

@@ -14,6 +14,11 @@ class Hitzone:
         self.stun = int(stun)
         self.kinsect_extract = kinsect_extract
 
+    def rename(self, part_name: str, state: str):
+        self.part_name = part_name
+        self.state = state
+        return self
+
     def to_dict(self):
         return {
             "part_name": self.part_name,

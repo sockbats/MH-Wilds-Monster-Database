@@ -4,7 +4,6 @@ import json
 from Monster import Monster
 from Hitzone import Hitzone
 
-
 KIRANICO_URL = r"https://mhwilds.kiranico.com"
 MH_WIKI_URL = r"https://monsterhunterwiki.org"
 
@@ -17,6 +16,7 @@ def get_monster_links() -> list[str]:
     monster_table = soup.find("table").find_all("tr")
     monster_links = [row.find("a")["href"] for row in monster_table]
     return monster_links
+
 
 def get_monster_images():
     url = MH_WIKI_URL + "/wiki/Category:MHWilds_Monster_Icons"
@@ -36,7 +36,6 @@ def get_monster_images():
             file_path = f"../public/monster-images/Ceratonoth (Female).png"
         elif "Ceratonoth" in file_path:
             file_path = f"../public/monster-images/Ceratonoth (Male).png"
-
 
         with open(file_path, "wb") as f:
             f.write(image_file)
@@ -64,6 +63,7 @@ def get_monster_data(site_path: str) -> Monster:
     monster.rename_states()
     return monster
 
+
 def get_zoh_shia() -> Monster:
     url = KIRANICO_URL + "/data/monsters/zoh-shia"
     site_data = get(url).content
@@ -81,7 +81,34 @@ def get_zoh_shia() -> Monster:
         hitzone = hitzones.find_all("td")
         monster.hitzones.append(Hitzone(*list(map(lambda x: x.text, hitzone)), extracts_map.get(hitzone[0].text)))
 
-    # TODO: Sort out duplicate head/wingarm hitzones
+    hitzones = monster.hitzones
+    monster.hitzones = [
+        # Head
+        hitzones[3],
+        hitzones[0].rename("Head", "Crystallized"),
+        hitzones[4],
+        hitzones[11].rename("Head (Darkened)", ""),
+        hitzones[12].rename("Head (Darkened)", "Wounds"),
+        # Left Wingarm
+        hitzones[5],
+        hitzones[1].rename("Left Wingarm", "Crystallized"),
+        hitzones[6].rename("Left Wingarm", "State_1"),
+        hitzones[7],
+        hitzones[13].rename("Left Wingarm (Darkened)", ""),
+        hitzones[14].rename("Left Wingarm (Darkened)", "State_1"),
+        hitzones[15].rename("Left Wingarm (Darkened)", "Wounds"),
+        hitzones[16].rename("Left Wingarm (Darkened)", "Weak Point"),
+        # Right Wingarm
+        hitzones[8],
+        hitzones[2].rename("Right Wingarm", "Crystallized"),
+        hitzones[9].rename("Right Wingarm", "State_1"),
+        hitzones[10],
+        hitzones[17].rename("Right Wingarm (Darkened)", ""),
+        hitzones[18].rename("Right Wingarm (Darkened)", "State_1"),
+        hitzones[19].rename("Right Wingarm (Darkened)", "Wounds"),
+        hitzones[20].rename("Right Wingarm (Darkened)", "Weak Point"),
+        *hitzones[21:]
+    ]
 
     monster.split_wounded_hitzones()
     monster.remove_nameless_hitzones()
@@ -90,10 +117,11 @@ def get_zoh_shia() -> Monster:
 
 
 def main():
-    get_monster_images()
+    # get_monster_images()
     monster_links = get_monster_links()
     # monster_data = [get_monster_data("/data/monsters/rathalos")]
-    ignored_monsters = ["/data/monsters/high-purrformance-barrel-puncher", "/data/monsters/dalthydon-livestock", "/data/monsters/zoh-shia"]
+    ignored_monsters = ["/data/monsters/high-purrformance-barrel-puncher", "/data/monsters/dalthydon-livestock",
+                        "/data/monsters/zoh-shia"]
     monster_data = [get_monster_data(monster) for monster in monster_links if monster not in ignored_monsters]
     monster_data.append(get_zoh_shia())
     monster_data.sort(key=lambda monster: monster.name)
